@@ -1,12 +1,10 @@
-package com.example.kotlinstart.view.main
+package com.example.kotlinstart.view.weatherlist
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.kotlinstart.model.Repository
 import com.example.kotlinstart.model.RepositoryIMPL
 import com.example.kotlinstart.viewmodel.AppState
-import java.lang.Thread.sleep
 
 class MainViewModel(
     private val liveData:MutableLiveData<AppState> = MutableLiveData(),
@@ -16,11 +14,18 @@ class MainViewModel(
     fun getData(): LiveData<AppState>{
         return liveData
     }
-    fun getWeather(){
+
+    fun getWeatherRussia() = getWeather(true)
+    fun getWeatherWorla() = getWeather(false)
+
+    private fun getWeather(isRussian:Boolean){
         Thread{
             liveData.postValue(AppState.Loading)
-            if ((0..10).random() > 1)
-                liveData.postValue(AppState.Success(repository.getWeatherFromServer()))
+            if ((0..10).random() > 0) {
+                val answer = if (!isRussian) repository.getWorldWeatherFromLocalStorage()
+                else repository.getRussianWeatherFromLocalStorage()
+                liveData.postValue(AppState.Success(answer))
+            }
             else
                 liveData.postValue(AppState.Error(IllegalAccessException()))
         }.start()
