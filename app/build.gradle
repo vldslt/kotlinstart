@@ -4,9 +4,11 @@ plugins {
 }
 
 android {
+    buildFeatures{
+        viewBinding true
+    }
     namespace 'com.example.kotlinstart'
     compileSdk 32
-
     defaultConfig {
         applicationId "com.example.kotlinstart"
         minSdk 28
