@@ -1,16 +1,11 @@
 package com.example.kotlinstart.view.weatherlist
 
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.kotlinstart.R
 import com.example.kotlinstart.databinding.FragmentWeatherListRecyclerItemBinding
-import com.example.kotlinstart.details.DetailsFragment
-import com.example.kotlinstart.model.Weather
-import com.example.kotlinstart.utils.KEY_BUNDLE_WEATHER
-import com.example.kotlinstart.view.MainActivity
+import com.example.kotlinstart.repository.Weather
 
 
 class WeatherListAdapter(

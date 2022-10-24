@@ -1,6 +1,6 @@
 package com.example.kotlinstart.viewmodel
 
-import com.example.kotlinstart.model.Weather
+import com.example.kotlinstart.repository.Weather
 
 sealed class AppState {
     object Loading:AppState()

@@ -11,7 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.kotlinstart.R
 import com.example.kotlinstart.databinding.FragmentWeatherListBinding
 import com.example.kotlinstart.details.DetailsFragment
-import com.example.kotlinstart.model.Weather
+import com.example.kotlinstart.repository.Weather
 import com.example.kotlinstart.utils.KEY_BUNDLE_WEATHER
 import com.example.kotlinstart.viewmodel.AppState
 import com.google.android.material.snackbar.Snackbar

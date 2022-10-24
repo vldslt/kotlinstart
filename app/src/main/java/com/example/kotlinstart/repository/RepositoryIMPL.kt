@@ -1,4 +1,4 @@
-package com.example.kotlinstart.model
+package com.example.kotlinstart.repository
 
 class RepositoryIMPL:Repository {
     override fun getWeatherFromServer(): Weather {

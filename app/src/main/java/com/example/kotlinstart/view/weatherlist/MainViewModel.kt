@@ -3,7 +3,7 @@ package com.example.kotlinstart.view.weatherlist
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.kotlinstart.model.RepositoryIMPL
+import com.example.kotlinstart.repository.RepositoryIMPL
 import com.example.kotlinstart.viewmodel.AppState
 
 class MainViewModel(
